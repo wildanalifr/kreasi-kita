@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCSS JIT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.css">
+</head>
+
+<body>
+    <!-- START: SECTION HEADER -->
+    <section class="header">
+        <div class="container mx-auto">
+
+            <!-- START: NAVBAR -->
+            <div class="navbar py-3 mx-3 sm:mx-0 bg-red-400 flex justify-between">
+                <div class="logo">
+                    <h1>Logo</h1>
+                </div>
+                <ul
+                    class="flex flex-col sm:flex-row items-center mx-auto justify-center sm:mx-0 sm:justify-end absolute inset-0 sm:relative transition duration-150 translate-x-full sm:translate-x-0 ">
+                    <li class="sm:ml-4 py-4 sm:py-0"><a href="#">Home</a></li>
+                    <li class="sm:ml-4 py-4 sm:py-0"><a href="#">About</a></li>
+                    <li class="sm:ml-4 py-4 sm:py-0"><a href="#">Contact</a></li>
+                </ul>
+                <button class="hamburger block z-10 sm:hidden">Click</button>
+            </div>
+            <!-- END: NAVBAR -->
+
+        </div>
+    </section>
+    <!-- END: SECTION HEADER -->
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
