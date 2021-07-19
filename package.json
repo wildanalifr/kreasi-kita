@@ -1,14 +1,22 @@
 {
-  "name": "tailwind-jit",
+  "name": "kreasi-kita-tailwind",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "set TAILWIND_MODE=watch&postcss tailwind.css -o ./public/style.css -w --verbose"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alifriow/kreasi-kita.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alifriow/kreasi-kita/issues"
+  },
+  "homepage": "https://github.com/alifriow/kreasi-kita#readme",
   "devDependencies": {
     "autoprefixer": "^10.3.1",
     "postcss-cli": "^8.3.1",

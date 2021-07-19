@@ -1,7 +1,3 @@
-.kiri {
-  transform: translateX(100%);
-}
-
-.kanan {
-  transform: translateX(0%);
+body {
+  font-family: "Mulish", "serif";
 }

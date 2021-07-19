@@ -5,36 +5,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TailwindCSS JIT</title>
+    <title>KreasiKita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="custom.css">
 </head>
 
 <body>
-    <!-- START: SECTION HEADER -->
-    <section class="header">
-        <div class="container mx-auto">
 
-            <!-- START: NAVBAR -->
-            <div class="navbar py-3 mx-3 sm:mx-0 bg-red-400 flex justify-between">
-                <div class="logo">
-                    <h1>Logo</h1>
+    <!-- START: HEADER -->
+    <header>
+
+        <!-- START: NAVBAR -->
+        <nav
+            class="navbar px-6 py-4 md:px-[100px] shadow-md md:shadow-none fixed w-full top-0 left-0 right-0 z-[100] bg-white">
+            <div class="flex justify-between items-center">
+                <div class="logo lg:mr-3">
+                    <h3>Logo</h3>
                 </div>
                 <ul
-                    class="flex flex-col sm:flex-row items-center mx-auto justify-center sm:mx-0 sm:justify-end absolute inset-0 sm:relative transition duration-150 translate-x-full sm:translate-x-0 ">
-                    <li class="sm:ml-4 py-4 sm:py-0"><a href="#">Home</a></li>
-                    <li class="sm:ml-4 py-4 sm:py-0"><a href="#">About</a></li>
-                    <li class="sm:ml-4 py-4 sm:py-0"><a href="#">Contact</a></li>
+                    class="absolute h-screen sm:h-[0px] z-10 inset-0 transform translate-x-full sm:translate-x-0 duration-500 bg-yellow-300 sm:bg-transparent flex flex-col justify-center items-center sm:relative sm:flex-row sm:ml-auto">
+                    <li
+                        class="text-xl sm:text-lg sm:text-gray-custom4 sm:hover:text-black-custom1 hover:font-bold sm:hover:font-normal transition duration-200 mb-5 sm:mb-0 sm:mr-14">
+                        <a href="#">Home</a>
+                    </li>
+                    <li
+                        class="text-xl sm:text-lg sm:text-gray-custom4 sm:hover:text-black-custom1 hover:font-bold sm:hover:font-normal transition duration-200 mb-5 sm:mb-0 sm:mr-14">
+                        <a href="#">Portofolio</a>
+                    </li>
+                    <li
+                        class="text-xl sm:text-lg sm:text-gray-custom4 sm:hover:text-black-custom1 hover:font-bold sm:hover:font-normal transition duration-200 mb-5 sm:mb-0 sm:mr-14">
+                        <a href="#">About</a>
+                    </li>
+                    <li
+                        class="text-xl sm:text-lg sm:text-gray-custom4 sm:hover:text-black-custom1 hover:font-bold sm:hover:font-normal transition duration-200">
+                        <a href="#">Contact</a>
+                    </li>
                 </ul>
-                <button class="hamburger block z-10 sm:hidden">Click</button>
+                <div class="hamburger relative z-50 hover:cursor-pointer sm:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                    <i class="fas fa-times text-2xl hidden"></i>
+                </div>
             </div>
-            <!-- END: NAVBAR -->
+        </nav>
+        <!-- START: NAVBAR -->
 
+        <div class="hero relative mt-7 sm:mt-14 z-10">
+            <div class="absolute top-12 -left-0.5 hidden sm:block">
+                <img src="../assets/images/titik.png" alt="">
+            </div>
+            <div class="px-6 pb-4 pt-20 lg:pt-0 md:px-[100px]">
+                <div class="flex flex-col lg:flex-row items-center">
+                    <div class="w-full lg:w-6/12">
+                        <h1 class="font-bold text-4xl md:text-6xl">Kreasi Kita</h1>
+                        <h5 class="mt-1 font-semibold text-xs md:text-lg">Kreasikan kreasimu dengan Kreasikita</h5>
+                        <p class="mt-3 text-sm text-gray-400 leading-5 md:mt-6 md:text-xl lg:w-11/12">Trafalgar
+                            provides
+                            progressive, and
+                            affordable
+                            healthcare, accessible on mobile and online
+                            for everyone</p>
+                        <button class="mt-5 py-3 px-6 md:mt-11 md:py-[16px] md:px-8 bg-blue-kreasiKita text-white text-xs md:text-lg rounded-full transition duration-200 hover:-translate-y-1 hover:shadow-lg 
+                            focus:outline-none focus:ring-4 focus:ring-offset-blue-800 focus:ring-opacity-50">Pesan
+                            sekarang</button>
+                    </div>
+                    <div class="w-full lg:w-6/12">
+                        <div class="w-[300px] lg:w-full">
+                            <img src="../assets/images/hero.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-    <!-- END: SECTION HEADER -->
 
-    <script src="./js/script.js"></script>
+    </header>
+    <!-- END: HEADER -->
+
+    <section class="min-h-screen"></section>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- jquery -->
+
+    <script src="script.js"></script>
+    <script>
+        $(window).scroll(function () {
+            if ($(window).width() > 960) {
+                if ($(window).scrollTop() > 10) {
+                    $('.navbar').css('box-shadow', '0px 15px 10px -15px #111');
+                } else {
+                    $('.navbar').css('box-shadow', 'none');
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
